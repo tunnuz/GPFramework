@@ -23,11 +23,24 @@ implements two underlying mechanisms to evolve programs:
 with several selection criteria including:
 
     * Parsimony pressure,
-    * hill climbing,
+    * strict/weak hill climbing,
     * multi-objective (for SMOGP).
 
 The best way to learn how to use it is to read the wide inline documentation (javadoc) 
 and have a look to how sorting, order and majority have been implemented. 
+
+GPFramework is distributed together with a NetBeans project, but should be opened
+fairly easily in other IDEs as well.
+
+### Dependencies
+
+Three libraries are needed in order to make GPFramework compile.
+
+    * Colt, http://acs.lbl.gov/software/colt
+    * Apache Commons Math >= 1.2
+    * Apache Commons CLI >= 2.2
+
+It is sufficient to add those to the project in order to use GPFramework.
 
 ### Licensing
 
