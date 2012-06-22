@@ -5,10 +5,13 @@
 
 GPFramework is a flexible Java framework for quick prototyping of Genetic Programming
 systems. Its main purpose has been, so far, to study Genetic Programming computational
-complexity from an experimental point of view, hence it is by no means a complete
-Genetic Programming framework, but might evolve to become that.
-
-Currently GPFramework handles mutation-only Genetic Programming.
+complexity from an experimental point of view (results of this research have been accepted
+for publishing in "Urli T., Wagner M. and Neumann F. (2012). Experimental Supplements to 
+the Computational Complexity Analysis of Genetic Programming for Problems Modelling Isolated 
+Program Semantics. In Proceedings of PPSN 2012 - 12th International Conference on Parallel 
+Problem Solving From Nature). Because of this specific purpose, the framework lacks a 
+number of features, e.g. support for cross-over operators, but it is (quite funnily) a 
+project under evolution and we invite everyone to contribute.
 
 ### How to use it
 
