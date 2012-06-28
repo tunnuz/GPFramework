@@ -56,10 +56,10 @@ public class PoissonMutationFactory extends SingleMutationFactory {
         
         // Generate one mutation according to super class
         List<Mutation> mutations = super.generate(problem);
-        int repetitions = 1+poisson.nextInt();
+        int repetitions = poisson.nextInt();
         
         for (int i = 0; i < repetitions; i++)
-            mutations.add((Mutation)mutations.get(0).clone());
+            mutations.addAll(super.generate(problem));
         
         return mutations;        
     }
