@@ -54,7 +54,7 @@ public class Deletion extends Mutation {
     public void apply(Terminal t)
     {
         Program program = t.getProgram();
-        
+                
         // Special handling if term being mutated is root
         if (t.isRoot())
         {
@@ -76,9 +76,14 @@ public class Deletion extends Mutation {
             
             // If parent was root, replace root with sibling otherwise
             // replace parent with sibling and do not reset root
-            if (parent.isRoot())
+            if (parent.isRoot()) {
                 t.getProgram().setRoot(s);
-            else
+                
+                // We force the node to redefine its parent as null, so to avoid
+                //   1) keeping old trees in memory
+                //   2) having a term referring to a previous parent of itself
+                s.setRoot();
+            } else
                 parent.getParent().replaceDescendant(parent, s);
         } 
         else 

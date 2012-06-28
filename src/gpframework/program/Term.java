@@ -239,4 +239,12 @@ public abstract class Term implements Cloneable
         hash = 37 * hash + (this.ID != null ? this.ID.hashCode() : 0);
         return hash;
     }
+
+    /**
+     * Marks this term as root (parent = null).
+     */
+    public void setRoot() 
+    {
+        this.parent = null;
+    }
 }
